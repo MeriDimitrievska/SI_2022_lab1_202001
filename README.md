@@ -1,1 +1,1 @@
-# SI_2022_lab1_202001
+Meri Dimitrievska 202001
