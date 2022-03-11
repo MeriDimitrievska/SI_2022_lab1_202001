@@ -2,4 +2,4 @@
 2. salt x 3
 3. pancake x 4
 4. sugar x 5
-5. ice cream x 6
+5. ice cream x 7
