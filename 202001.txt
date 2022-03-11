@@ -1,0 +1,144 @@
+4. За да го клонирам репозиториумот со помош на Command Prompt ја користам наредбата git clone https://github.com/MeriDimitrievska/SI_2022_lab1_202001.git
+   и го земам репозиториумот кој што го креирав на GitHub. По клонирање на истиот со помош на cd SI_2022_lab1_202001 
+   влегувам во него за да може да ги извршувам следните задачи.
+
+5. Откако ја креирав текстуалната датотека shopping_list.txt , истата ја ставам на сцена со помош на командата
+   git add shopping_list.txt и потоа правам commit со наредбата git commit -m "Add 5 items to the shopping list".
+   Тука мора прво да се направи само add поради тоа што датотеката за прв пат е креирана. 
+
+6. Ги додавам ставките и правам add и commit со помош на git commit -a -m "Add quantities to the items". Сега веќе можеме
+   да ја употребуваме командата git commit -a -m " Message" затоа што датотеката е додадена претходно а сега само 
+   вршиме промени во истата.
+
+7. Гранките ги креирам со помош на git branch branch1 и git branch branch2 и оваа команда само ги креира гранките но не 
+   не префрла на нив значи сеуште сме на мастер гранката.
+
+8. C:\Users\Korisnik\SI_2022_lab1_202001>git log
+commit c2db919812d42f5d3a869d72e0805b01dce28ed2 (HEAD -> master, branch2, branch1)
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:16:03 2022 +0100
+
+    Add quantities to the items
+
+commit 9c4cfac1719ff271790359d3ecbdc7fedbbcbd43
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:14:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 95a48fa1402f0d7d4e18ff72af58d60b9d9d55c2 (origin/master, origin/HEAD)
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:32 2022 +0100
+
+    Initial commit
+
+commit 9fdf0f0319d84b95e5ea4bee24a4905d0a1445dc
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:09 2022 +0100
+
+    Initial commit
+
+9. Се наоѓам на гранката master, со помош на git push ги ставам сите промени на git, потоа
+   се префрлам на гранката branch1 со помош на git checkout branch1 и правам git push --set-upstream origin branch1 и 
+   истово го правам и со гранката branch2. Во овој случај нема потреба да правам git pull за ниту една гранка поради тоа 
+   што сама работам на вежбава и никој во меѓувреме не може да смени нешто.
+
+10. За да се префрлиме од една на друга гранка се користи git checkout ImeNaGranka, така што во овој случај
+    за да се префрлам на гранката branch1 користам git checkout branch1
+
+11. Ја менувам количината за петата ставка и правам add и commit со помош на git commit -a -m "Change quantitu of item #5",
+    со ова се менува ставката но само на оваа гранка, не и на останатите.
+
+12. Се враќам на master со помош на git checkout master
+
+13. Ја менувам количината за втората ставка и правам add и commit со помош на git commit -a -m "Change quantitu of item #2",
+    со ова се менува ставката но само на оваа гранка, не и на останатите.
+
+14. Се префрлам од една на друга гранка со помош на git checkout ImeNaGranka и правам git push за сите измени што ги направив 
+    да бидат ставени и на GitHub.
+
+15. Се префрлам на гранката branch2 со помош на git checkout branch2
+
+16. Го менувам името на четвртата ставка и правам add и commit со помош на git commit -a -m "Modify item #4"
+
+17. C:\Users\Korisnik\SI_2022_lab1_202001>git log
+commit cc8c90b6cf5244061d66227780c6d014a4eee7f1 (HEAD -> branch2)
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:23:31 2022 +0100
+
+    Modify item #4
+
+commit c2db919812d42f5d3a869d72e0805b01dce28ed2 (origin/branch2)
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:16:03 2022 +0100
+
+    Add quantities to the items
+
+commit 9c4cfac1719ff271790359d3ecbdc7fedbbcbd43
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:14:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 95a48fa1402f0d7d4e18ff72af58d60b9d9d55c2
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:32 2022 +0100
+
+    Initial commit
+
+commit 9fdf0f0319d84b95e5ea4bee24a4905d0a1445dc
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:09 2022 +0100
+
+    Initial commit
+
+18. Ова го правам со помош на git commit --amend -m "Modify item #4 and add item #6" и оваа команда
+    не прави нов commit туку го модифицира последниот.
+
+19. C:\Users\Korisnik\SI_2022_lab1_202001>git log
+commit ae0149c8b1b517e8738fd99e55b2348a0db411b8 (HEAD -> branch2)
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:23:31 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit c2db919812d42f5d3a869d72e0805b01dce28ed2 (origin/branch2)
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:16:03 2022 +0100
+
+    Add quantities to the items
+
+commit 9c4cfac1719ff271790359d3ecbdc7fedbbcbd43
+Author: MeriDimitrievska <meridimitrievskaaa@gmail.com>
+Date:   Fri Mar 11 19:14:06 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 95a48fa1402f0d7d4e18ff72af58d60b9d9d55c2
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:32 2022 +0100
+
+    Initial commit
+
+commit 9fdf0f0319d84b95e5ea4bee24a4905d0a1445dc
+Author: Meri Dimitrievska <85848070+MeriDimitrievska@users.noreply.github.com>
+Date:   Fri Mar 11 19:10:09 2022 +0100
+    Initial commit
+
+20. C:\Users\Korisnik\SI_2022_lab1_202001>git merge branch1
+	Auto-merging shopping_list.txt
+	Merge made by the 'ort' strategy.
+ 	shopping_list.txt | 2 +-
+ 	1 file changed, 1 insertion(+), 1 deletion(-)
+Спојувањето е направено без конфликт.
+
+21. C:\Users\Korisnik\SI_2022_lab1_202001>git merge branch2
+	Auto-merging shopping_list.txt
+	CONFLICT (content): Merge conflict in shopping_list.txt
+	Automatic merge failed; fix conflicts and then commit the result.
+Тука имаше конфликт кој што го решив со помош на менување на содржината на датотеката во master, повторно 
+ја додадов датотеката и направив git add shopping_list.txt git commit -m "Merge branch 'branch2'".
+
+22. Датотеката се додава со помош на git add 202001.txt па git commit -m "Add docs"
+
+23. Синхронизација се прави со git push на сите гранки.
