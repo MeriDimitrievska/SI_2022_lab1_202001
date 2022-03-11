@@ -1,5 +1,5 @@
-1. milk
-2. salt
-3. pancake
-4. sugar
-5. ice cream
+1. milk x 2
+2. salt x 3
+3. pancake x 4
+4. sugar x 5
+5. ice cream x 6
